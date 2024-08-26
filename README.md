@@ -14,3 +14,7 @@ To test on an emulator or simulator:
   3. Similarly open the simulator using the command: "ionic cap open ios". This will open xcode in Mac and the project can be tested on virtual device or an apple phone.
 - The visual studio has to be allowed to open other devices.
 - The environment variables have to defined for the "android" to recognize the Android Studio and "ios" to recognize the xcode file locations.
+
+
+Additional installation for MAC OS Sonoma: (if needed)
+1. npm install @awesome-cordova-plugins/core --save --legacy-peer-deps
