@@ -46,6 +46,10 @@
     --background-rgb: 255, 255, 255;
 }
 
+.montly{
+    text-align: center;
+}
+
 ion-col{
     text-align: left;
     color: white;
@@ -63,6 +67,14 @@ ion-row{
 a{
     color: cyan;
     font-size: small;
+}
+
+.margin_remove_bottom{
+    margin-bottom: 0;
+}
+
+.padding_remove_top{
+    padding-top: 0;
 }
 
 ion-skeleton-text {
