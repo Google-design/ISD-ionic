@@ -45,12 +45,28 @@
 </ion-content>
 
 <ion-footer>
-  <ion-buttons class="footer-buttons">
+  <!-- <ion-buttons class="footer-buttons">
     <ion-button size="small" (click)="scrollToTop()" class="footer-button">
       TOP <ion-icon name="arrow-up-sharp"></ion-icon>
     </ion-button>
     <ion-button size="small" (click)="scrollToDown()" class="footer-button">
       BOTTOM <ion-icon name="arrow-down-sharp"></ion-icon>
     </ion-button>
-  </ion-buttons>
+  </ion-buttons> -->
+  <ion-item (click)="reciterSelect.open()">
+    <ion-label position="floating">Select Reciter</ion-label>
+    <ion-select style="font-size: small;" #reciterSelect [(ngModel)]="selectedReciterId" interface="action-sheet" (ionChange)="onReciterChange()">
+      <ion-select-option *ngFor="let reciter of reciters" [value]="reciter.identifier">
+        <ng-container *ngIf="reciter.language === 'en'; else arabicTemplate">
+          {{ reciter.name }}
+        </ng-container>
+        <ng-template #arabicTemplate>
+          {{ reciter.englishName }} - 
+          {{ reciter.name }}
+        </ng-template>
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
 </ion-footer>
